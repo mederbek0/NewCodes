@@ -26,7 +26,13 @@ public class DoubleLinkedList {
     a.AddToEnd(7);
     a.AddToBeginning(10);
     a.AddToBeginning(11);
+    a.AddToBeginning(9);
+    a.AddToBeginning(4);
+    a.print();
+    a.DeleteNode(2);
     a.print();
     }
+  
+    
     
 }

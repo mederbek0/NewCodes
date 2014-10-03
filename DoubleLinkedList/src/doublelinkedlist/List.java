@@ -48,16 +48,32 @@ public class List {
             head=tmp;
         }
     }
+    // //Delete node
+    public void DeleteNode( int Data)
+    {
+        Node tmp=head;
+        boolean yes=false;
+        while(tmp!=null && !yes)
+        {
+            if(tmp.getData()==Data)
+            {
+                tmp.getNext().setPrev(tmp.getPrev());
+                tmp.getPrev().setNext(tmp.getNext());
+                yes=true;
+            }
+            tmp=tmp.getNext();
+        }
+    }
     //Print List
     public void print(){
         Node r;
         r=head;
         while(r!=null)
         {
-            System.out.println(r.getData());
+            System.out.print(r.getData()+" ");
             r=r.getNext();
         }
-    
+    System.out.println();
     }
     
 }
