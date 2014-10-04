@@ -64,6 +64,35 @@ public class List {
             tmp=tmp.getNext();
         }
     }
+    public void InsertNodetoSorted(int data){
+        Node tmp=new Node(data);
+        Node r=head;
+        boolean yes=false;
+        while((!yes) && (r!=null))
+        {
+            if (r.getNext()!=null)
+            if(r.getData()<=tmp.getData() && r.getNext().getData()>=tmp.getData())
+            {
+                r.getNext().setPrev(tmp);
+                tmp.setNext(r.getNext());
+                tmp.setPrev(r);
+                r.setNext(tmp);
+                yes=true;
+                System.out.println("a");
+            }
+            r=r.getNext();
+        }
+            if(head!=null){
+            if(!yes && head.getData()>tmp.getData())
+                AddToBeginning(data);
+            else if(!yes && head.getData()<tmp.getData())
+                AddToEnd(data);
+            }else
+                AddToBeginning(data);
+                    
+            
+                
+    }
     //Print List
     public void print(){
         Node r;

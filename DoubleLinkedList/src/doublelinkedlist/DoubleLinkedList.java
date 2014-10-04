@@ -18,19 +18,22 @@ public class DoubleLinkedList {
     public static void main(String[] args) {
         // TODO code application logic here
     List a= new List();
-    a.AddToEnd(1);
     a.AddToEnd(5);
-    a.AddToEnd(2);
-    a.AddToEnd(4);
-    a.print();
+    a.AddToEnd(6);
     a.AddToEnd(7);
-    a.AddToBeginning(10);
-    a.AddToBeginning(11);
-    a.AddToBeginning(9);
+    a.AddToEnd(8);
+    a.print();
+    a.AddToEnd(9);
     a.AddToBeginning(4);
+    a.AddToBeginning(3);
+    a.AddToBeginning(2);
+    a.AddToBeginning(1);
     a.print();
     a.DeleteNode(2);
     a.print();
+    a.InsertNodetoSorted(10);
+    a.print();
+    
     }
   
     
