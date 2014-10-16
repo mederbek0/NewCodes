@@ -35,12 +35,12 @@ public class hashTable {
         }
         System.out.println();
             
-    }//end printing Table
+    }// end printing Table
     public int hashFunc(int key)
     {
         return key%size;// Hash Function
     }
-    //insertion
+    // insertion
     public void Insert(DataItem item)
     {
         int key=item.getKey();
@@ -52,7 +52,7 @@ public class hashTable {
         }
         hashArray[hashVal]=item;//insertion
     }
-    //deletion
+    // deletion
     public DataItem Delete(int key)
     {
         int hashVal=hashFunc(key);
