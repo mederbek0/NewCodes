@@ -5,7 +5,7 @@
  */
 
 package quicksort;
-
+import java.util.Scanner;
 /**
  *
  * @author mederbekbegmatov
@@ -17,6 +17,18 @@ public class QuickSort {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner in=new Scanner(System.in);
+        int n=in.nextInt();
+        Srt a=new Srt(n);
+        for (int i=0;i<n;i++)
+        {   
+            int k=in.nextInt();
+            a.insert(k);
+    
+        }
+        a.display();
+        a.Qksort();
+        a.display();
     }
     
 }
