@@ -39,16 +39,46 @@ public class List {
      return current;
         
     }
-    public void printTree()
+    //inorder traverse
+    public void inorderTraverse()
     {
-        print(head);
+        printInorder(head);
     }
-    public void print(Node current)
+    public void printInorder(Node current)
     {
         if (current == null)
             return;
-        print(current.getLeft());
+        printInorder(current.getLeft());
         System.out.print(current.getData()+" ");
-        print(current.getRight());
+        printInorder(current.getRight());
+    }
+    
+    //preorder Traverse
+    public void preorderTraverse()
+    {
+        printPreorder(head);
+    }
+    public void printPreorder(Node current)
+    {
+        if (current == null)
+            return;
+        System.out.print(current.getData()+" ");
+        printPreorder(current.getLeft());
+        printPreorder(current.getRight());
+    }
+    
+    //PostOrder Traverse
+    public void postorderTraverse()
+    {
+        printPostorder(head);
+    }
+    public void printPostorder(Node current)
+    {
+        if (current == null)
+            return;
+        printPostorder(current.getLeft());
+        printPostorder(current.getRight());
+        System.out.print(current.getData()+" ");
+        
     }
 }

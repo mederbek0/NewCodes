@@ -25,7 +25,11 @@ public class BinaryTree {
         tree.addNode(12);
         tree.addNode(-1);
         
-        tree.printTree();
+        tree.preorderTraverse();
+        System.out.println();
+        tree.inorderTraverse();
+        System.out.println();
+        tree.postorderTraverse();
     }
     
 }
