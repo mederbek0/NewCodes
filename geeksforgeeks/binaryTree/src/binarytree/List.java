@@ -107,4 +107,18 @@ public class List {
         else
             return val2;
     }
+    
+    public void mirror(Node current)
+    {
+        if (current== null)
+            return;
+        else
+        {
+            mirror(current.getLeft());
+            mirror(current.getRight());
+            Node tmp = current.getLeft();
+            current.setLeft(current.getRight());
+            current.setRight(tmp);
+        }
+    }
 }
