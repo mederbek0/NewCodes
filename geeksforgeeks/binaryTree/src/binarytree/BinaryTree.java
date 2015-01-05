@@ -25,11 +25,43 @@ public class BinaryTree {
         tree.addNode(12);
         tree.addNode(-1);
         
+        //second tree
+        List tree1=new List();
+        tree1.addNode(4);
+        tree1.addNode(3);
+        tree1.addNode(0);
+        tree1.addNode(10);
+        tree1.addNode(12);
+        tree1.addNode(-1);
+        
+        
         tree.preorderTraverse();
         System.out.println();
         tree.inorderTraverse();
         System.out.println();
         tree.postorderTraverse();
+        System.out.println();
+        System.out.println(tree.sizeof());
+        
+        if (isIdentical(tree.head,tree1.head))
+            System.out.println("Indentical");
+        else
+            System.out.println("Not Identical");
+
+            
+        
+    }
+    public static boolean isIdentical(Node x,Node y){
+        
+        if ((x==null) && (y==null))
+            return true;
+        if (x!=null && y!=null)
+           if (x.getData()==y.getData())
+            return isIdentical(x.getLeft(),y.getLeft()) && isIdentical(x.getRight(),y.getRight());
+                    
+                    
+        
+        return false;
     }
     
 }

@@ -81,4 +81,16 @@ public class List {
         System.out.print(current.getData()+" ");
         
     }
+    public int sizeof()
+    {
+        return size(head);
+    }
+    public int size(Node current)
+    {
+        if (current==null)
+            return 0;
+        else
+            return size(current.getLeft())+1+size(current.getRight());
+    }
+    
 }
