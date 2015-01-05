@@ -92,5 +92,19 @@ public class List {
         else
             return size(current.getLeft())+1+size(current.getRight());
     }
-    
+    public int depth(Node current)
+    {
+        if (current==null)
+            return 0;
+        else
+            return max(depth(current.getLeft()),depth(current.getRight()))+1;
+        
+    }
+    public int max(int val1,int val2)
+    {
+        if (val1>val2)
+            return val1;
+        else
+            return val2;
+    }
 }

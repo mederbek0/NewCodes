@@ -23,7 +23,7 @@ public class BinaryTree {
         tree.addNode(0);
         tree.addNode(10);
         tree.addNode(12);
-        tree.addNode(-1);
+        tree.addNode(5);
         
         //second tree
         List tree1=new List();
@@ -47,9 +47,8 @@ public class BinaryTree {
             System.out.println("Indentical");
         else
             System.out.println("Not Identical");
+        System.out.println(tree.depth(tree.head));
 
-            
-        
     }
     public static boolean isIdentical(Node x,Node y){
         
@@ -58,10 +57,9 @@ public class BinaryTree {
         if (x!=null && y!=null)
            if (x.getData()==y.getData())
             return isIdentical(x.getLeft(),y.getLeft()) && isIdentical(x.getRight(),y.getRight());
-                    
-                    
-        
         return false;
     }
+   
+    
     
 }
