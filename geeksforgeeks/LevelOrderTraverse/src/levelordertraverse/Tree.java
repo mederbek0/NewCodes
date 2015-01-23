@@ -65,6 +65,47 @@ public class Tree<T extends Comparable<T>> {
                 list.add(tempNode.getRight());
             
         }
+        
+        
+    }
+    //printing tree in spiral level traverse
+    public void spiralLevelOrderTraverse()
+    {
+        spiralPrint(root);
+    }
+    
+    public void spiralPrint(Node current)
+    {
+        Stack<Node> k=new Stack<Node>();
+        Stack<Node> k1=new Stack<Node>();
+        Node tempNode=root;
+        k1.push(root);
+        while(!k.isEmpty() ||!k1.isEmpty())
+        {
+            while(!k.isEmpty())
+            {
+                if (!k.isEmpty())
+                    tempNode=k.pop();
+          //
+                System.out.print(tempNode.getData()+" ");
+                if (tempNode.getLeft()!=null)k1.push(tempNode.getLeft());
+                if (tempNode.getRight()!=null)k1.push(tempNode.getRight());
+            }
+            while(!k1.isEmpty())
+            {
+                if (!k1.isEmpty())
+                    tempNode=k1.pop();
+          //
+                System.out.print(tempNode.getData()+" ");
+                if (tempNode.getRight()!=null)k.push(tempNode.getRight());
+                if (tempNode.getLeft()!=null)k.push(tempNode.getLeft());
+                
+                
+                
+                
+            }
+        }
+         
     }
     
     

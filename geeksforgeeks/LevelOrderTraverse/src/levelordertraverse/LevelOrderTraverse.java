@@ -24,10 +24,29 @@ public class LevelOrderTraverse {
         tr.add(20);
         tr.add(13);
         tr.add(21);
+        tr.add(29);
+        tr.add(24);
+        tr.add(31);
+        tr.add(-1);
+        tr.add(3);
+        tr.add(1);
+        tr.add(14);
+        tr.add(12);
         tr.print();
         System.out.println();
         tr.printLevelOrder();
+        System.out.println();
+        tr.spiralLevelOrderTraverse();
         
     }
     
 }
+//             5
+//         /        \
+//        0         20
+//       /   \       / \
+//      -1   2     13  21
+//           /\           \
+//          1  3           29
+//                         / \   
+//                        24  31  
